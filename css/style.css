@@ -1,6 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    color: #fff;
+
+    /* Gradient Overlay and Background Image */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('../assets/images/FCGPortrait.jpg'); 
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .tab-container {
     display: flex;
@@ -9,16 +20,17 @@ body {
 .tab {
     padding: 10px 20px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     border: 1px solid transparent;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
 }
 .tab:hover {
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 .tab.active {
-    background-color: #fff;
+    background-color: #252525;
     border-color: #ccc;
     border-bottom: 2px solid #fff;
     margin-bottom: -2px;
