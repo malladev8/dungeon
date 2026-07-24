@@ -55,6 +55,12 @@ body {
     display: none;
 }
 
+.content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
 /* ==================== MOBILE STYLES (< 768px wide) ==================== */
 @media (max-width: 768px) 
 {
@@ -127,11 +133,11 @@ body {
         border: none;
         margin-bottom: 0;
     }
+
+    .content {
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
 }
 
 /* ==================== CONTENT STYLES ==================== */
-.content {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
