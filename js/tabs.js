@@ -13,7 +13,7 @@ class NavTabs extends HTMLElement
         <div class="tabs-list">
           <a href="index.html" class="tab" data-page="index.html">Home</a>
           <a href="about.html" class="tab" data-page="about.html">About</a>
-          <a href="campaigns.html" class="tab" data-page="campaigns.html">Campaigns</a>
+          <a href="adventures.html" class="tab" data-page="adventures.html">Adventures</a>
           <a href="gallery.html" class="tab" data-page="gallery.html">Gallery</a>
           <a href="testimonials.html" class="tab" data-page="testimonials.html">Testimonials</a>
           <a href="faqs.html" class="tab" data-page="faqs.html">FAQs</a>
