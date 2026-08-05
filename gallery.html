@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Static Website</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/tabs.js"></script>
 </head>
 <body>
     <!-- Tab Navigation -->
@@ -13,9 +12,21 @@
 
     <!-- Tab Content -->
     <main class="content">
-        <h1>Welcome to the Gallery Tab</h1>
-        <p>This is a simple static website.</p>
+        <h1>Gallery</h1>
+        
+        <div id="gallery" class="gallery"></div>
+
+        <div id="lightbox" class="lightbox hidden">
+
+            <span id="closeLightbox">&times;</span>
+
+            <img id="lightboxImage">
+
+        </div>
+
     </main>
 
+    <script src="js/tabs.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>

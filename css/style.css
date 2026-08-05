@@ -45,6 +45,63 @@ body {
     max-height: 0;
 }
 
+.gallery
+{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+.gallery img
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: transform .2s;
+}
+
+.gallery img:hover
+{
+    transform: scale(1.02);
+}
+
+.lightbox
+{
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.9);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.lightbox.hidden
+{
+    display: none;
+}
+
+.lightbox img
+{
+    max-width: 95%;
+    max-height: 95%;
+}
+
 /* ==================== DESKTOP STYLES (Default) ==================== */
 .tab-container {
     display: flex;
