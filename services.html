@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Static Website</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/tabs.js"></script>
 </head>
 <body>
     <!-- Tab Navigation -->
@@ -76,39 +75,50 @@
         <h4>Xhaula</h4>
         <p>Embark on a truly unique adventure in my custom high fantasy world, where your choices don't just shape the story, they become part of the world's history.</p>
 
+    <section class ="published-adventures">
         <h3>Published Adventures</h3>
         <p>Published adventures are pre-written stories that have been officially released by Wizards of the Coast or other publishers.<br>
            Published adventures provide a carefully crafted story while still allowing plenty of room for player choice, roleplaying, and memorable moments unique to your group.</p>
         
-        <h4>Out of the Abyss</h4>
-        <p>Survive the horrors of the Underdark as you escape captivity, forge unlikely alliances, and confront a growing madness that threatens the world below.</p>
+        <div class="carousel">
+            <div class="carousel-card">
+                <img id="coverImage">
 
-        <h4>Waterdeep: Dragon Heist</h4>
-        <p>A fast-paced urban adventure filled with mystery, intrigue, and rival factions as you hunt for a legendary hidden fortune beneath the City of Splendors.</p>
+                <h4 id="title"></h4>
 
-        <h4>Waterdeep: Dungeon of the Mad Mage</h4>
-        <p>Descend into the legendary halls of Undermountain, a sprawling megadungeon packed with deadly monsters, ancient secrets, and untold treasures.</p>
+                <p class="genre" id="genre"></p>
 
-        <h4>Icewind Dale: Rime of the Frost Maiden</h4>
-        <p>Brave the frozen wastes of Icewind Dale, where endless winter, ancient mysteries, and lurking terrors challenge even the hardiest adventurers.</p>
+                <p id="tagline"></p>
 
-        <h4>The Curse of Strahd</h4>
-        <p>Enter the mist-shrouded realm of Barovia, where gothic horror, tragic characters, and a powerful vampire lord create one of D&D's most iconic adventures.</p>
+                <button id="learnMore">
+                    Learn More
+                </button>
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
 
-        <h4>Tomb of Annihilation</h4>
-        <p>Embark on an expedition through dangerous jungles, forgotten ruins, and deadly tombs in a race against time to uncover the source of a mysterious magical curse.</p>
+        <div class="details hidden">
 
-        <h4>Baldur's Gate: Descent into Avernus</h4>
-        <p>Journey from the streets of Baldur's Gate into the first layer of the Nine Hells, where infernal bargains, epic battles, and impossible choices await.</p>
+            <h4>Synopsis</h4>
+            <p id="synopsis"></p>
 
-        <h4>Tyranny of Dragons</h4>
-        <p>Stand against the Cult of the Dragon as their ambitious plans threaten the Sword Coast, leading to an epic adventure spanning kingdoms, alliances, and legendary foes.</p>
+            <h4>Recommended Levels</h4>
+            <p id="levels"></p>
 
-        <h4>The Wild Beyond the Witchlight</h4>
-        <p>Step into the enchanting Feywild, where whimsy, wonder, and clever problem-solving take center stage in a magical adventure where violence isn't always the answer.</p>
+            <h4>Campaign Length</h4>
+            <p id="length"></p>
 
-        <h4>Call of the Netherdeep</h4>
-        <p>A character-driven journey inspired by Exandria, where rival adventuring parties, ancient mysteries, and difficult choices shape the fate of a forgotten hero.</p>
+            <h4>Themes</h4>
+            <p id="themes"></p>
+
+            <h4>Content Warnings</h4>
+            <p id="warnings"></p>
+
+            <h4>Recommended For</h4>
+            <p id="recommended"></p>
+        </div>
+    </section>
 
         <h2>One-Shots</h2>
         <p>One-Shots are perfect for groups looking for a complete adventure in a single session, whether it's for a special occasion, trying D&D for the first time, or simply enjoying a memorable night together.<br>
@@ -187,6 +197,8 @@
            Learn the rules naturally through play in a custom-designed introductory adventure featuring exploration, roleplaying, puzzles, and exciting combat.</p>
 
     </main>
-
+    <script src="js/tabs.js"></script>
+    <script src="js/adventures.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

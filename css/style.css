@@ -17,6 +17,34 @@ body {
     background-attachment: fixed;
 }
 
+.carousel-card
+{
+    width: 640px;
+}
+
+.carousel-card img
+{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+
+    transition: transform .2s ease;
+}
+
+.details {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.details.hidden {
+    max-height: 0;
+}
+
 /* ==================== DESKTOP STYLES (Default) ==================== */
 .tab-container {
     display: flex;
