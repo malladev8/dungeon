@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Static Website</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/tabs.js"></script>
 </head>
 <body>
     <!-- Tab Navigation -->
@@ -32,7 +31,15 @@
         <p>TODO: Add sizzle reel here.</p>
 
         <h2>Featured Gallery</h2>
-        <p>TODO: Add featured gallery content here.</p>
+        <div id="featuredGallery" class="featuredGallery"></div>
+
+        <div id="lightbox" class="lightbox hidden">
+
+            <span id="closeLightbox">&times;</span>
+
+            <img id="lightboxImage">
+
+        </div>
         <p>TODO: Add gallery button here.</p>
 
         <h2>Testimonials</h2>
@@ -40,6 +47,8 @@
         <p>TODO: Add testimonial button here.</p>
 
     </main>
-
+    <script src="js/tabs.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/featuredGallery.js"></script>
 </body>
 </html>
