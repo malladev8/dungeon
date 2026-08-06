@@ -12,3 +12,28 @@ node_modules/
 
 # Build output (if using Astro/Vite/etc.)
 dist/
+
+# Visual Studio
+.vs/
+
+# Build output
+Debug/
+Release/
+x64/
+x86/
+
+# Intermediate files
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.tlog
+*.lastbuildstate
+
+# User files
+*.user
+*.VC.db
+*.VC.opendb

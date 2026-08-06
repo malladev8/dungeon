@@ -6,9 +6,9 @@ for (let i = 0; i <= 90; ++i)
 {
     const img = document.createElement("img");
 
-    img.src = `assets/images/gallery/IMG_${i}.jpg`;
+    img.src = `assets/images/gallery/thumbs/IMG_${i}.jpg`;
 
-    img.dataset.full = `assets/images/gallery/IMG_${i}.jpg`;
+    img.dataset.full = `assets/images/gallery/full/IMG_${i}.jpg`;
 
     img.loading = "lazy";
 
