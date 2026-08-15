@@ -1,7 +1,3 @@
-
-
-const gallery = document.getElementById("gallery");
-
 function populateGallery(containerId, imageIndices)
 {
     const container = document.getElementById(containerId);

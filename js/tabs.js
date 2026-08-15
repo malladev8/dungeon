@@ -3,6 +3,10 @@ class NavTabs extends HTMLElement
   connectedCallback() 
   {
     this.innerHTML = `
+      <div class="site-title">
+        <h1>Astral Arcs</h1>
+      </div>  
+
       <nav class="tab-container">
         <button class="hamburger-menu" aria-label="Toggle navigation">
           <span></span>

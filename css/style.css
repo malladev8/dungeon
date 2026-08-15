@@ -1,3 +1,21 @@
+@font-face{
+    font-family: "MirageFinal";
+    src: url("../assets/fonts/Mirage final.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.site-title h1
+{
+    font-family: "MirageFinal", serif;
+    font-size: 4.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    color: #59fcff;
+    -webkit-text-stroke: 0.5px white;
+    text-shadow: 3px 3px 0px #000000;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
