@@ -195,7 +195,7 @@ img
 
 
 /* ============================================================
-   SECTIONS
+   GENERAL SECTIONS
    ============================================================ */
 
 .section
@@ -280,6 +280,20 @@ strong
 }
 
 
+/* Don't let the first heading on a page have unnecessary spacing */
+
+.content > h1:first-child
+{
+    margin-top: 0;
+}
+
+.content > h2:first-child,
+.content > h3:first-child
+{
+    margin-top: 0;
+}
+
+
 /* ============================================================
    LINKS
    ============================================================ */
@@ -335,8 +349,6 @@ button,
 {
     color: var(--background);
     background: #ffffff;
-
-    transform: translateY(-2px);
 
     box-shadow:
         0 6px 20px rgba(89, 252, 255, 0.2);
@@ -409,7 +421,7 @@ button,
 
 .card:hover
 {
-    transform: translateY(-3px);
+    /* transform: translateY(-3px); */
 
     border-color: var(--border-light);
 
@@ -652,6 +664,14 @@ button,
 }
 
 
+/* Home page featured gallery */
+
+#featuredGallery
+{
+    margin-bottom: 1.5rem;
+}
+
+
 /* ============================================================
    LIGHTBOX
    ============================================================ */
@@ -803,6 +823,260 @@ button,
 
 
 /* ============================================================
+   SERVICES
+   ============================================================ */
+
+/*
+    These classes are designed for the improved Services HTML.
+
+    They also coexist safely with the simpler structure in your
+    current page.
+*/
+
+.service-section
+{
+    margin-bottom: 4.5rem;
+
+    padding-top: 0.5rem;
+}
+
+.service-section + .service-section
+{
+    border-top: 1px solid rgba(53, 64, 77, 0.5);
+
+    padding-top: 3.5rem;
+}
+
+.service-section:last-child
+{
+    margin-bottom: 0;
+}
+
+.service-section > h2
+{
+    margin-top: 0;
+}
+
+.service-intro
+{
+    max-width: 850px;
+
+    margin-bottom: 2rem;
+
+    font-size: 1.05rem;
+}
+
+
+/* Game format / booking option cards */
+
+.setting-grid
+{
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1rem;
+
+    margin: 2rem 0 4rem;
+}
+
+.setting-card
+{
+    padding: 1.5rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+/* .setting-card:hover
+{
+    border-color: var(--border-light);
+
+    transform: translateY(-2px);
+} */
+
+.setting-card h3,
+.setting-card h4
+{
+    margin-top: 0;
+
+    color: var(--accent);
+}
+
+.setting-card p
+{
+    margin-bottom: 0;
+}
+
+
+/* Campaign settings */
+
+.settings-intro
+{
+    max-width: 850px;
+
+    margin-bottom: 1.5rem;
+}
+
+.setting-list
+{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1rem 1.25rem;
+
+    margin-top: 1.5rem;
+}
+
+.setting-list-item
+{
+    padding: 1.25rem 1.5rem;
+
+    background: rgba(22, 28, 38, 0.65);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+}
+
+.setting-list-item h4
+{
+    margin-top: 0;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--text);
+}
+
+.setting-list-item p
+{
+    margin: 0;
+}
+
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+
+.pricing
+{
+    margin-top: 2rem;
+
+    padding: 1.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(89, 252, 255, 0.07),
+            var(--surface)
+        );
+
+    border: 1px solid var(--border);
+
+    border-left: 3px solid var(--accent);
+
+    border-radius: 0 var(--radius) var(--radius) 0;
+
+    box-shadow: var(--shadow);
+}
+
+.pricing h3
+{
+    margin-top: 0;
+}
+
+.pricing ul
+{
+    margin-bottom: 0;
+}
+
+.pricing-card
+{
+    margin: 3rem 0;
+
+    padding: 2rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--accent-dark);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-card h3
+{
+    margin-top: 0;
+}
+
+.price-row
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.price-row strong
+{
+    color: var(--accent);
+
+    font-size: 1.1rem;
+}
+
+
+/* ============================================================
+   PUBLISHED ADVENTURES
+   ============================================================ */
+
+.published-adventures
+{
+    margin-top: 5rem;
+
+    padding: 3rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025),
+            rgba(255,255,255,0.01)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+.published-adventures .section-header
+{
+    margin-bottom: 2rem;
+}
+
+.published-adventures > h3
+{
+    margin-top: 0;
+
+    font-size: 1.6rem;
+}
+
+.published-adventures > p
+{
+    max-width: 850px;
+}
+
+
+/* ============================================================
    CAROUSEL
    ============================================================ */
 
@@ -815,6 +1089,12 @@ button,
     display: flex;
 
     justify-content: center;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
 }
 
 .carousel-card
@@ -850,11 +1130,10 @@ button,
 
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.35);
-
-    transition: transform 0.2s ease;
 }
 
-.carousel-card h3
+.carousel-card h3,
+.carousel-card h4
 {
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
@@ -864,6 +1143,67 @@ button,
 {
     margin: 0.5rem 0;
 }
+
+.carousel-card .genre
+{
+    color: var(--accent);
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* Your current HTML uses .carousel-btn */
+
+.carousel-btn
+{
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: var(--text);
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    font-size: 1.1rem;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.carousel-btn:hover
+{
+    color: var(--background);
+
+    background: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: scale(1.08);
+}
+
+
+/* Compatibility with the alternate carousel structure */
 
 .carousel-actions
 {
@@ -907,25 +1247,59 @@ button,
     background: var(--surface);
 }
 
+
+/* Expandable adventure details */
+
 .details
 {
     max-height: 1000px;
 
     overflow: hidden;
 
-    margin-top: 1rem;
+    max-width: 640px;
+
+    margin: 1rem auto 0;
+
+    padding: 1.5rem;
+
+    background: rgba(22, 28, 38, 0.65);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    opacity: 1;
 
     transition:
         max-height 0.3s ease,
-        opacity 0.3s ease;
+        opacity 0.3s ease,
+        margin 0.3s ease,
+        padding 0.3s ease;
 }
 
 .details.hidden
 {
     max-height: 0;
 
+    margin-top: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
     opacity: 0;
 
+    border-color: transparent;
+}
+
+.details h4
+{
+    margin-top: 1.5rem;
+
+    color: var(--accent);
+}
+
+.details h4:first-child
+{
     margin-top: 0;
 }
 
@@ -936,87 +1310,35 @@ button,
 
 
 /* ============================================================
-   SERVICES
+   SERVICE LISTS
    ============================================================ */
 
-.service-section
+.service-section ul
 {
-    margin-bottom: 4rem;
+    color: var(--text-muted);
 }
 
-.service-section:last-child
+.service-section li
 {
-    margin-bottom: 0;
+    margin-bottom: 0.4rem;
 }
 
-.service-section > h2
+.service-section li::marker
 {
-    margin-top: 0;
-}
-
-.service-intro
-{
-    max-width: 850px;
-
-    margin-bottom: 2rem;
-}
-
-.setting-grid
-{
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1.25rem;
-}
-
-.setting-card
-{
-    padding: 1.5rem;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-}
-
-.setting-card h4
-{
-    margin-top: 0;
-
-    color: var(--text);
-}
-
-.setting-card p
-{
-    margin-bottom: 0;
+    color: var(--accent);
 }
 
 
-/* ============================================================
-   PRICING
-   ============================================================ */
+/* Nested lists */
 
-.pricing
+.service-section ul ul
 {
-    padding: 1.5rem;
-
-    background: var(--surface);
-
-    border-left: 3px solid var(--accent);
-
-    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-top: 0.35rem;
 }
 
-.pricing h3
+.service-section ul ul li
 {
-    margin-top: 0;
-}
-
-.pricing ul
-{
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
 }
 
 
@@ -1163,8 +1485,6 @@ button,
 .contact-form-section button:hover
 {
     background: white;
-
-    transform: translateY(-2px);
 }
 
 
@@ -1239,6 +1559,12 @@ button,
     .featuredGallery
     {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .setting-grid,
+    .setting-list
+    {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1345,7 +1671,8 @@ button,
     .card-grid,
     .card-grid.two-column,
     .testimonials,
-    .setting-grid
+    .setting-grid,
+    .setting-list
     {
         grid-template-columns: 1fr;
     }
@@ -1387,9 +1714,27 @@ button,
         margin: 1.5rem auto;
     }
 
+    .carousel
+    {
+        gap: 0.5rem;
+    }
+
     .carousel-card
     {
         padding: 1rem;
+    }
+
+    .carousel-btn
+    {
+        width: 36px;
+        height: 36px;
+
+        font-size: 0.9rem;
+    }
+
+    .details
+    {
+        padding: 1.25rem;
     }
 
     .contact-page
@@ -1407,6 +1752,11 @@ button,
     .cta
     {
         padding: 2.5rem 1.25rem;
+    }
+
+    .service-section
+    {
+        margin-bottom: 3rem;
     }
 }
 
@@ -1442,4 +1792,174 @@ button,
     {
         padding: 0.7rem 1.2rem;
     }
+
+    .carousel
+    {
+        display: grid;
+
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .carousel-card
+    {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .carousel-btn.prev
+    {
+        grid-column: 1;
+        grid-row: 2;
+
+        justify-self: end;
+    }
+
+    .carousel-btn.next
+    {
+        grid-column: 3;
+        grid-row: 2;
+
+        justify-self: start;
+    }
+}
+
+/* ============================================================
+   ONE-SHOT SECTIONS
+   ============================================================ */
+
+.tag-grid
+{
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1rem;
+
+    margin: 2rem 0 3rem;
+}
+
+.tag-card
+{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    padding: 1.25rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+.tag-card strong
+{
+    color: var(--text);
+}
+
+.tag-card span
+{
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+
+.theme-list
+{
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    margin: 1.5rem 0 3rem;
+}
+
+.theme-list span
+{
+    padding: 0.5rem 1rem;
+
+    color: var(--accent);
+
+    background: rgba(89, 252, 255, 0.06);
+
+    border: 1px solid var(--accent-dark);
+
+    border-radius: 999px;
+}
+
+/* ============================================================
+   WHAT'S INCLUDED SECTIONS
+   ============================================================ */
+.included-section
+{
+    margin: 6rem 0;
+}
+
+.included-grid
+{
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1rem;
+
+    max-width: 800px;
+}
+
+.included-grid div
+{
+    padding: 1rem 1.25rem;
+
+    color: var(--text);
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+}
+
+/* ============================================================
+   NEW PLAYER SECTIONS
+   ============================================================ */
+
+.new-player-callout
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3rem;
+
+    margin: 6rem 0 2rem;
+
+    padding: 3rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(89, 252, 255, 0.08),
+            rgba(89, 252, 255, 0.02)
+        );
+
+    border: 1px solid var(--accent-dark);
+
+    border-radius: 12px;
+}
+
+.new-player-callout h2
+{
+    margin-top: 0;
+}
+
+.new-player-callout p
+{
+    max-width: 700px;
 }
