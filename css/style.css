@@ -1,38 +1,461 @@
-@font-face{
+/* ============================================================
+   SITE FOUNDATION
+   ============================================================ */
+
+:root
+{
+    --background: #0d1118;
+    --surface: #161c26;
+    --surface-light: #202938;
+
+    --text: #eeeae2;
+    --text-muted: #b8b4ad;
+
+    --accent: #59fcff;
+    --accent-dark: #208c96;
+
+    --border: #35404d;
+
+    --max-width: 1200px;
+}
+
+
+/* ============================================================
+   FONTS
+   ============================================================ */
+
+@font-face
+{
     font-family: "MirageFinal";
     src: url("../assets/fonts/Mirage final.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-.site-title h1
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+*
 {
-    font-family: "MirageFinal", serif;
-    font-size: 4.5rem;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    color: #59fcff;
-    -webkit-text-stroke: 0.5px white;
-    text-shadow: 3px 3px 0px #000000;
+    box-sizing: border-box;
 }
 
-body {
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0;
+
     font-family: Arial, sans-serif;
-    margin: 20px;
-    color: #fff;
-    
-    min-height: 100vh;
-    background-color: #1a1a1a;
+    font-size: 1rem;
+    line-height: 1.6;
 
-    /* Gradient Overlay and Background Image */
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('../assets/images/FCGPortrait.jpg'); 
+    color: var(--text);
+    background: var(--background);
+}
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+
+/* ============================================================
+   HEADER / SITE TITLE
+   ============================================================ */
+
+.site-title
+{
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    padding: 1.5rem 2rem 1rem;
+}
+
+.site-title h1
+{
+    margin: 0;
+
+    font-family: "MirageFinal", serif;
+    font-size: 3.75rem;
+    font-weight: normal;
+
+    letter-spacing: 0.05em;
+    line-height: 1;
+
+    color: var(--accent);
+
+    -webkit-text-stroke: 0.5px white;
+
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 20px rgba(89, 252, 255, 0.15);
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.tab-container
+{
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.tabs-list
+{
+    display: flex;
+    align-items: stretch;
+}
+
+.tab
+{
+    position: relative;
+
+    display: block;
+
+    padding: 0.75rem 1.25rem;
+
+    color: var(--text-muted);
+    text-decoration: none;
+
+    border-bottom: 2px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.tab:hover
+{
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tab.active
+{
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: bold;
+}
+
+
+/* ============================================================
+   PAGE CONTENT
+   ============================================================ */
+
+.content
+{
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 3rem 4rem;
+
+    background: var(--background);
+
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4
+{
+    color: var(--text);
+    line-height: 1.2;
+}
+
+h1
+{
+    font-size: 2.75rem;
+    margin-top: 0;
+}
+
+h2
+{
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+
+    font-size: 2rem;
+}
+
+h3
+{
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+
+    font-size: 1.3rem;
+
+    color: var(--accent);
+}
+
+h4
+{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.1rem;
+}
+
+p
+{
+    color: var(--text-muted);
+}
+
+strong
+{
+    color: var(--text);
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a
+{
+    color: var(--accent);
+
+    transition: color 0.2s ease;
+}
+
+a:hover
+{
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+button,
+.button
+{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.button
+{
+    display: inline-block;
+
+    padding: 0.75rem 1.5rem;
+
+    color: #0d1118;
+    background: var(--accent);
+
+    border: none;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.button:hover
+{
+    color: #0d1118;
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 20px rgba(89, 252, 255, 0.2);
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.card
+{
+    padding: 1.5rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card h3
+{
+    margin-top: 0;
+}
+
+
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
+
+.hamburger-menu
+{
+    display: none;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30px;
+    height: 22px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.hamburger-menu span
+{
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--text);
+
+    border-radius: 2px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.hamburger-menu.open span:nth-child(1)
+{
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(2)
+{
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3)
+{
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px)
+{
+    .site-title
+    {
+        padding: 1.25rem 1.25rem 0.75rem;
+    }
+
+    .site-title h1
+    {
+        font-size: 2.75rem;
+    }
+
+    .tab-container
+    {
+        justify-content: flex-end;
+
+        padding: 0.75rem 1.25rem;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hamburger-menu
+    {
+        display: flex;
+    }
+
+    .tabs-list
+    {
+        display: none;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+
+        width: 220px;
+
+        padding: 0.5rem 0;
+
+        background: var(--surface);
+
+        border: 1px solid var(--border);
+        border-radius: 8px;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.5);
+
+        z-index: 1000;
+    }
+
+    .tabs-list.open
+    {
+        display: flex;
+    }
+
+    .tab
+    {
+        padding: 0.8rem 1rem;
+
+        border: none;
+        border-left: 2px solid transparent;
+    }
+
+    .tab.active
+    {
+        color: var(--accent);
+
+        background: rgba(89, 252, 255, 0.05);
+
+        border-left-color: var(--accent);
+    }
+
+    .content
+    {
+        padding: 2rem 1.25rem;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    h1
+    {
+        font-size: 2.25rem;
+    }
+
+    h2
+    {
+        font-size: 1.75rem;
+    }
 }
 
 /* ==================== CAROUSEL STYLES ==================== */
@@ -171,131 +594,6 @@ body {
     border-radius: 8px;
 }
 
-/* ==================== DESKTOP STYLES (Default) ==================== */
-.tab-container {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
-    position: relative;
-}
-
-.tabs-list {
-    display: flex;
-}
-
-.tab {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid transparent;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-}
-
-.tab:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.tab.active {
-    background-color: #fff;
-    color: #333;
-    border-color: #ccc;
-    border-bottom: 2px solid #fff;
-    margin-bottom: -2px;
-    font-weight: bold;
-}
-
-/* Hide the hamburger button on wide desktop screens */
-.hamburger-menu {
-    display: none;
-}
-
-.content {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-/* ==================== MOBILE STYLES (< 768px wide) ==================== */
-@media (max-width: 768px) 
-{
-    .tab-container {
-        justify-content: flex-end;
-        border-bottom: none; /* Cleans up line breaks on mobile viewports */
-        padding: 10px 0;
-    }
-
-    /* Make the hamburger button visible and style the 3 stacked lines */
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 1001; /* Keeps the button clickable on top of the menu */
-    }
-
-    .hamburger-menu span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        border-radius: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    /* Animate the 3 lines into an "X" when open */
-    .hamburger-menu.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger-menu.open span:nth-child(2) { opacity: 0; }
-    .hamburger-menu.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-
-    /* Hide the layout list by default and drop it down as a smooth menu panel */
-    .tabs-list {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95); /* Dark solid overlay matches background */
-        border: 1px solid #444;
-        border-radius: 8px;
-        padding: 10px 0;
-        z-index: 1000;
-    }
-
-    /* Reveal the dropdown list when the open class is triggered via JS */
-    .tabs-list.open {
-        display: flex;
-    }
-
-    /* Adjust the links to stack vertically and look like mobile buttons */
-    .tab {
-        padding: 15px 20px;
-        border: none;
-        border-radius: 0;
-        text-align: left;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .tab.active {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border: none;
-        margin-bottom: 0;
-    }
-
-    .content {
-        padding: 20px;
-        border: 1px solid #ccc;
-    }
-}
-
-/* ==================== CONTENT STYLES ==================== */
 
 /* ==================== CONTACT STYLES ==================== */
 .contact-page
