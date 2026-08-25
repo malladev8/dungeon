@@ -183,6 +183,8 @@ img
 {
     max-width: var(--max-width);
 
+    min-height: 100vh;
+
     margin: 0 auto;
 
     padding: 3rem 4rem;
