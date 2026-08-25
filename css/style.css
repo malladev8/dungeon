@@ -1762,6 +1762,12 @@ button,
     {
         margin-bottom: 3rem;
     }
+
+    .tag-card
+    {
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
 }
 
 
@@ -1860,6 +1866,8 @@ button,
     border: 1px solid var(--border);
 
     border-radius: 8px;
+
+    overflow-wrap: break-word;
 }
 
 .tag-card strong
