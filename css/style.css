@@ -1550,7 +1550,8 @@ button,
 @media (max-width: 900px)
 {
     .card-grid,
-    .testimonials
+    .testimonials,
+    .tag-grid
     {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1672,7 +1673,8 @@ button,
     .card-grid.two-column,
     .testimonials,
     .setting-grid,
-    .setting-list
+    .setting-list,
+    .tag-grid
     {
         grid-template-columns: 1fr;
     }
@@ -1832,7 +1834,7 @@ button,
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 1rem;
 
@@ -1841,6 +1843,8 @@ button,
 
 .tag-card
 {
+    min-width: 0;
+
     display: flex;
 
     flex-direction: column;
