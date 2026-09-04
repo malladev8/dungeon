@@ -1,5 +1,5 @@
 const allImages = [];
-const numGalleryImages = 91;
+const numGalleryImages = 95;
 
 for (let i = 0; i < numGalleryImages; ++i)
 {
