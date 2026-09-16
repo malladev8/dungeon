@@ -778,53 +778,6 @@ button,
 
 
 /* ============================================================
-   TESTIMONIALS
-   ============================================================ */
-
-.testimonials
-{
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 1.5rem;
-}
-
-.testimonial
-{
-    padding: 1.75rem;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-}
-
-.testimonial-quote
-{
-    margin: 0 0 1.25rem;
-
-    color: var(--text);
-
-    font-size: 1.05rem;
-
-    font-style: italic;
-}
-
-.testimonial-author
-{
-    margin: 0;
-
-    color: var(--accent);
-
-    font-weight: bold;
-}
-
-
-/* ============================================================
    SERVICES
    ============================================================ */
 
@@ -1976,4 +1929,90 @@ button,
 .new-player-callout p
 {
     max-width: 700px;
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+
+.testimonials-grid {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1.5rem;
+    margin-top:2rem;
+}
+
+.testimonials-grid .testimonial {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    padding:2rem;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+}
+
+.testimonials-grid .testimonial-quote {
+    flex:1;
+}
+
+.testimonials-grid .testimonial-quote p {
+    margin:0 0 1rem;
+    color:var(--text-muted);
+    line-height:1.7;
+}
+
+.testimonials-grid .testimonial-quote p:last-child {
+    margin-bottom:0;
+}
+
+.testimonials-grid .testimonial-author {
+    margin-top:1.5rem;
+    padding-top:1rem;
+    border-top:1px solid var(--border);
+}
+
+.testimonials-grid .testimonial-author strong {
+    color:var(--accent);
+    font-family:MirageFinal, Arial, sans-serif;
+    font-size:1.1rem;
+}
+
+.testimonials-grid .testimonial-featured {
+    grid-column:span 2;
+}
+
+@media (max-width:768px) {
+    .testimonials-grid {
+        grid-template-columns:1fr;
+    }
+
+    .testimonials-grid .testimonial-featured {
+        grid-column:span 1;
+    }
+}
+
+@media (max-width:480px) {
+    .testimonials-grid .testimonial {
+        padding:1.5rem;
+    }
+}
+
+/* ============================================================
+   FEATUREDTESTIMONIALS
+   ============================================================ */
+
+.section-action {
+    margin-top:2rem;
+    text-align:center;
+}
+
+.home-testimonials {
+    grid-template-columns:repeat(3, 1fr);
+}
+
+@media (max-width:900px) {
+    .home-testimonials {
+        grid-template-columns:1fr;
+    }
 }
