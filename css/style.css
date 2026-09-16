@@ -2016,3 +2016,70 @@ button,
         grid-template-columns:1fr;
     }
 }
+
+/* ============================================================
+   COMMUNITY
+   ============================================================ */
+
+.community-grid {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1.5rem;
+    margin-top:2rem;
+}
+
+.community-card {
+    display:flex;
+    gap:1.5rem;
+    padding:2rem;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+}
+
+.community-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 3rem;
+    width:3rem;
+    height:3rem;
+    color:var(--accent);
+    border:1px solid var(--accent-dark);
+    border-radius:50%;
+    font-size:1.4rem;
+}
+
+.community-content {
+    min-width:0;
+}
+
+.community-content h3 {
+    margin:0 0 .75rem;
+    color:var(--text);
+}
+
+.community-content p {
+    margin:0 0 1.5rem;
+    color:var(--text-muted);
+    line-height:1.6;
+}
+
+@media (max-width:768px) {
+    .community-grid {
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:480px) {
+    .community-card {
+        flex-direction:column;
+        padding:1.5rem;
+    }
+
+    .community-icon {
+        flex-basis:2.75rem;
+        width:2.75rem;
+        height:2.75rem;
+    }
+}
